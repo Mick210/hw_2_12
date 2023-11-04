@@ -20,14 +20,14 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public String sum(@RequestParam int num1, @RequestParam int num2) {
-        int result = calculatorService.sum(num1, num2);
+    public String plus(@RequestParam int num1, @RequestParam int num2) {
+        int result = calculatorService.plus(num1, num2);
         return createRs(num1, num2, '+', result);
     }
 
     @GetMapping("/minus")
-    public String substract(@RequestParam int num1, @RequestParam int num2) {
-        int result = calculatorService.subtract(num1, num2);
+    public String minus(@RequestParam int num1, @RequestParam int num2) {
+        int result = calculatorService.minus(num1, num2);
         return createRs(num1, num2, '-', result);
     }
 
