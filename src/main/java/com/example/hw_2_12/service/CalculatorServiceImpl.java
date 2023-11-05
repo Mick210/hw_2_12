@@ -1,5 +1,6 @@
-package com.example.hw_2_12;
+package com.example.hw_2_12.service;
 
+import com.example.hw_2_12.exeption.DivideByZeroException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,6 +22,9 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public int divide(int num1, int num2) {
+        if (num2 == 0) {
+            throw new DivideByZeroException("На ноль делить нельзя!");
+        }
         return num1 / num2;
     }
 }

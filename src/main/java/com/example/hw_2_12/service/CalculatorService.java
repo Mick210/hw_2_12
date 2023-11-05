@@ -1,4 +1,4 @@
-package com.example.hw_2_12;
+package com.example.hw_2_12.service;
 
 public interface CalculatorService {
     int plus(int num1, int num2);
